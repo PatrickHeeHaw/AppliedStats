@@ -1,0 +1,65 @@
+---
+title: "Birthday"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753SPRINGHA)
+```
+
+## Question
+
+The mathematical derivation of the probability that two ro more people in a class of size n have the same birthday.
+
+
+
+### Mathematical Derivation 
+
+The probability that at least two people share a birthday is:
+
+$$P(n) = 1 - \frac{365!}{365^n \cdot (365-n)!}$$
+
+Equivalently:
+
+$$P(n) = 1 - \frac{P(365, n)}{365^n}$$
+
+## Reformulation Using Logarithms
+
+We will use the probability using lfactorial and lchoose
+
+$$
+P(a) = 1 - \exp\!\Big(\text{lfactorial}(n) + \text{lchoose}(365,n) - n \log(365)\Big)
+$$
+
+
+## Function
+
+Body of the birthday function:
+
+```{r}
+birthday
+```
+
+## Function given
+
+Using the function with the given r code.
+
+```{r}
+birthday(n = 20:25)
+```
+
+### Interpretation
+
+According to the data in a class of 20 people, there is approximately a 41% chance of teh a shared birthday between 1 or 2 people. If there is a class of 23 people then the probability goes up to around 50% chance of people having a shared birthday. Lastly the 25 people have a 57% chance of having a shared birthday. 
+

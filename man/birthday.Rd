@@ -2,21 +2,21 @@
 % Please edit documentation in R/birthday.R
 \name{birthday}
 \alias{birthday}
-\title{Calculate Brithday Probability}
+\title{Calculate Birthday Probability}
 \usage{
 birthday(n)
 }
 \arguments{
-\item{n}{Integer or vecotr of itnegers}
+\item{n}{The class size of the fucntion}
 }
 \value{
 vector of probabilities
 }
 \description{
-Calculate Brithday Probability
+Calculate Birthday Probability
 }
 \examples{
-#Probbability for a class of 23 people
+#Probability for a class of 23 people
 birthday(23)
 
 }
