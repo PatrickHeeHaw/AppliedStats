@@ -1,0 +1,81 @@
+---
+title: "MATH4753SPRINGHA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MATH4753SPRINGHA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753SPRINGHA)
+```
+
+# Introduction
+This vignette explains what the package does.
+
+
+# Running the packages
+
+# ntickets
+
+This is the nticket fucntion. The purpose fo this fucntion is to help airlines determine how many tickets they shoudl sell for a flight. Given the number of actual seats on the plane. The propability that a ticketed passenger shows up; and the acceptable probability that the plane beocme truly overbooked.
+
+```{r}
+
+result<-ntickets()
+result 
+```
+
+
+# myncurve
+
+This package is teaching/visualization tool for the normal distribution. Where it will draw a normal curve with mean mu and standard deviation sigma. Then shades teh area from the far left up to a point a. Then it will compute the probability. Returns the parameters and teh calculated probability. 
+
+```{r}
+MATH4753SPRINGHA::myncurve(0,1,0)
+```
+
+# mycltb
+
+The function mycltb() simulates the Central Limit Theorm using binomial distributions. 
+
+```{r}
+MATH4753SPRINGHA::mycltb(1,1,0.5)
+```
+
+# myBoot2
+
+This fucntion uses the bootstrap method to estimate a confidence interval for any statistic(mean, median, etc)
+
+```{r}
+MATH4753SPRINGHA::myboot2(iter=10000,rnorm(20,10,4),fun="mean",alpha=0.05,cx=1.5)
+```
+
+
+# mybin
+
+This function performs a binomial simulation
+
+```{r}
+MATH4753SPRINGHA::mybin(100, 10, 0.5)
+```
+
+# Birthday
+
+The purpose of this function is to compute the probability that at least two people in a room share the same birthday, for a class of size n.
+
+```{r}
+MATH4753SPRINGHA::birthday(10)
+```
+
+
+
+

@@ -9,7 +9,8 @@
 #' @returns a normal curve of probability
 #' @export
 #'
-#' @examples myncurve(0,1, 0)
+#' @examples
+
 myncurve = function(mu, sigma, a){
   x <- NULL
   curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu + 3*sigma))
